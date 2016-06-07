@@ -17,6 +17,7 @@ class StartTheGame
     puts "2 - Human vs Human"
     puts "3 - Wargames"
     puts "\n"
+    print "Command: "
     @game_choice = gets.strip
   end
 
@@ -92,11 +93,12 @@ class StartTheGame
 ## Start of Play Again ##
   def play_again?
     puts "\nDo you want to play again? (yes/no)"
+    print "Command: "
     answer = gets.strip.downcase
-    if answer == "yes"
+    if answer == "yes" || answer == "y"
       game_type
       start
-    elsif answer == "no"
+    elsif answer == "no" || answer == "quit" || answer == "n" || answer == "exit"
       puts "╭∩╮（︶︿︶）╭∩╮"
       puts "\n"
       puts "*~*~*~*~*~*~~**~*~*~*~*~*~*~*~*~*~*~*~*"
