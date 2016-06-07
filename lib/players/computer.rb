@@ -15,7 +15,7 @@ class Player::Computer < Player
   
   
   def turn_count
-    board.count {|token| token == "X" || token == "O"}
+    @board.count {|token| token == "X" || token == "O"}
   end
   
   def move(board)
